@@ -1,0 +1,29 @@
+.form-control {
+  &.custom-form {
+    @media screen and (min-width: 1200px) {
+      border-radius: 50px;
+      padding: 20px 40px;
+      font-size: 22px;
+      font-family: $font-family-semibold;
+    }
+  }
+}
+
+.btn {
+  &:not(.btn-sm) {
+    @media screen and (min-width: 1400px) {
+      font-size: 30px;
+      font-family: $font-family-semibold;
+      padding: 3px 42px;
+    }
+  }
+  &.btn-accent,
+  &.btn-tertiary {
+    color: white;
+  }
+  &.btn-sm {
+    font-family: $font-family-bold;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
