@@ -111,6 +111,9 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        align-self: flex-start;
+        position: relative;
+        top: -6px;
         .humburger{
             min-width: 36px;
             max-width: 36px;
@@ -120,10 +123,19 @@ header {
             border: none;
             outline: none;
             margin-right: 8px;
+            display: none;
         }
         .logo{
             height: 36px;
         }
+    }
+    .center{
+      max-width: 926px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      .form-control{
+        
+      }
     }
     .right{
         display: flex;
@@ -146,4 +158,9 @@ main {
   width: calc(100% - 130px);
   float: right;
   padding: 36px 1rem;
+}
+
+.main-body{
+  padding-top: 22px;
+  height: calc(100% - 30px);
 }

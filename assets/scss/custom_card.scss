@@ -1,0 +1,150 @@
+.custom-card {
+  border-radius: 22px;
+  box-shadow: inset 0 12px 18px rgba($color: #000000, $alpha: 0.15);
+  position: relative;
+  padding-top: 67px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.my-tab {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 4px 18px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $primary;
+  min-width: 215px;
+  position: relative;
+  img {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -9px;
+    min-height: 41px;
+    height: 44px;
+    width: 100%;
+    filter: drop-shadow(0 16px 10px #00000020);
+    z-index: 3;
+  }
+  p {
+    position: relative;
+    margin-bottom: 0;
+    z-index: 4;
+  }
+  &.active {
+    font-size: 15px;
+    font-family: $font-family-bold;
+    img {
+      display: block;
+    }
+  }
+}
+
+.with-dropdown {
+  .my-tab {
+    img {
+      top: -1px;
+      min-height: 48px;
+      object-fit: cover;
+    }
+  }
+}
+
+.nav-pills {
+  padding: 0 8px;
+  .my-tab {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 6px;
+  border-radius: 30px;
+  background: #b2b2b2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.table-responsive {
+  height: 200px;
+  overflow-y: auto;
+}
+
+table.table {
+  overflow: visible;
+  .dropdown {
+    .btn {
+      font-size: 18px;
+      font-family: $font-family-light;
+      padding: 0;
+      color: $primary;
+    }
+    .dropdown-toggle {
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.595' height='5.493' viewBox='0 0 9.595 5.493'%3E%3Cpath id='dropdown' d='M1190.688,221.14l3.632-3.635a.683.683,0,0,1,.966,0l0,0a.7.7,0,0,1,0,.973l-4.115,4.118a.685.685,0,0,1-.947.02l-4.143-4.136a.687.687,0,0,1,.969-.973Z' transform='translate(-1185.891 -217.303)' fill='%2326506e'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        border: none;
+        position: relative;
+        top: 2px;
+        width: 9px;
+        height: 5px;
+      }
+    }
+  }
+  th {
+    font-size: 14px;
+  }
+  td {
+    font-size: 18px;
+  }
+  th,
+  td {
+    font-family: $font-family-light;
+    &:first-child {
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      padding-left: 1rem;
+    }
+    &:last-child {
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      padding-right: 1rem;
+    }
+  }
+  &.table-striped {
+    > tbody {
+      > tr {
+        &:nth-of-type(even) {
+          > td {
+            padding-top: 12px;
+            padding-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -529,11 +529,15 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               3rem !default;
+$border-radius:               .5rem !default;
 $border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-2xl:           2rem !default;
+$border-radius-lg:            1rem !default;
+$border-radius-xl:            2rem !default;
+$border-radius-2xl:           3rem !default;
+// $border-radius-sm:            $border-radius !default;
+// $border-radius-lg:            $border-radius !default;
+// $border-radius-xl:            $border-radius !default;
+// $border-radius-2xl:           $border-radius !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
@@ -699,22 +703,22 @@ $mark-bg:                     $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
+$table-cell-padding-y:        .25rem !default;
 $table-cell-padding-x:        .5rem !default;
 $table-cell-padding-y-sm:     .25rem !default;
 $table-cell-padding-x-sm:     .25rem !default;
 
 $table-cell-vertical-align:   top !default;
 
-$table-color:                 var(--#{$prefix}body-color) !default;
+$table-color:                 $primary !default;
 $table-bg:                    transparent !default;
 $table-accent-bg:             transparent !default;
 
 $table-th-font-weight:        null !default;
 
 $table-striped-color:         $table-color !default;
-$table-striped-bg-factor:     .05 !default;
-$table-striped-bg:            rgba($black, $table-striped-bg-factor) !default;
+$table-striped-bg-factor:     .1 !default;
+$table-striped-bg:            rgba($tertiary, $table-striped-bg-factor) !default;
 
 $table-active-color:          $table-color !default;
 $table-active-bg-factor:      .1 !default;
@@ -758,7 +762,7 @@ $table-variants: (
 
 // scss-docs-start input-btn-variables
 $input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-x:         1.25rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -769,8 +773,8 @@ $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-colo
 $input-btn-focus-blur:          0 !default;
 $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      .325rem !default;
+$input-btn-padding-x-sm:      1.25rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
 $input-btn-padding-y-lg:      .5rem !default;
@@ -815,9 +819,9 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color:     $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
+$btn-border-radius:           $border-radius * 15 !default;
 $btn-border-radius-sm:        $border-radius-sm * 15 !default;
-$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius-lg:        $border-radius-lg * 15 !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -876,9 +880,9 @@ $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
 
-$input-border-radius:                   $border-radius !default;
-$input-border-radius-sm:                $border-radius-sm !default;
-$input-border-radius-lg:                $border-radius-lg !default;
+$input-border-radius:                   $border-radius * 15 !default;
+$input-border-radius-sm:                $border-radius-sm * 15 !default;
+$input-border-radius-lg:                $border-radius-lg * 15 !default;
 
 $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              tint-color($component-active-bg, 50%) !default;
