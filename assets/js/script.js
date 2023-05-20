@@ -116,34 +116,35 @@ const addCenterTextAfterDraw = chart => {
 const roundCornersAfterDraw = chart => {
 	if (chart.config.options.elements.arc.roundCorners !== undefined) {
 		var arc = chart.getDatasetMeta(0).data[chart.config.options.elements.arc.roundCorners];
-		var startAngle = pi / 2 - arc._view.startAngle;
-		var endAngle = pi / 2 - arc._view.endAngle;
+		// var startAngle = pi / 2 - arc._view.startAngle;
+		// var endAngle = pi / 2 - arc._view.endAngle;
 		chart.ctx.save();
 		chart.ctx.translate(arc.round.x, arc.round.y);
     chart.ctx.fillStyle = arc.round.backgroundColor;
 		chart.ctx.beginPath();
-		chart.ctx.arc(
-			arc.round.radius * Math.sin(startAngle),
-			arc.round.radius * Math.cos(startAngle),
-			arc.round.thickness,
-			0,
-			2 * pi
-		);
-		chart.ctx.arc(
-			arc.round.radius * Math.sin(endAngle),
-			arc.round.radius * Math.cos(endAngle),
-			arc.round.thickness,
-			0,
-			2 * pi
-		);
+		// chart.ctx.arc(
+		// 	arc.round.radius * Math.sin(startAngle),
+		// 	arc.round.radius * Math.cos(startAngle),
+		// 	arc.round.thickness,
+		// 	0,
+		// 	2 * pi
+		// );
+		// chart.ctx.arc(
+		// 	arc.round.radius * Math.sin(endAngle),
+		// 	arc.round.radius * Math.cos(endAngle),
+		// 	arc.round.thickness,
+		// 	0,
+		// 	2 * pi
+		// );
 		chart.ctx.fill();
 		chart.ctx.restore();
 	}
 };
 
 var datasets = [{
-  "data": [3.5, 2.5],
-  "backgroundColor": [ "#26506E", "#A8B9C5" ]
+  "data": [7.5, 2.5],
+  "backgroundColor": [ "#26506E", "#A8B9C5" ],
+  "borderWidth": [1, 12]
 }];
 var chartData = {
   type: 'doughnut',
@@ -151,7 +152,7 @@ var chartData = {
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    cutoutPercentage: 90,
+    cutoutPercentage: 60,
     segmentShowStroke: false,
     events: [],
     elements: {
