@@ -1,0 +1,217 @@
+.profile {
+  .image-container {
+    min-width: 245px;
+    min-height: 245px;
+    width: 245px;
+    height: 245px;
+    display: block;
+    margin: auto;
+    background-color: $accent;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      min-width: 245px;
+      min-height: 245px;
+      width: 245px;
+      height: 245px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.edit-profile {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+}
+
+.profile-more-text {
+  @media screen and (min-width: 1600px) {
+    padding: 54px 71px;
+  }
+  padding: 1.5rem;
+  .details {
+    font-size: 0.875rem;
+    font-family: $font-family-light;
+    color: $primary;
+    margin-top: 32px;
+    line-height: 1.6;
+  }
+}
+
+.myday {
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+    background-color: $tertiary;
+    border-radius: 8px 8px 0 0;
+    position: sticky;
+    top: 0;
+    .current-day {
+      color: white;
+      margin-bottom: 0;
+      font-size: 17px;
+      font-family: $font-family-semibold;
+    }
+    [class*="day-"] {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      width: 8px;
+      height: 14px;
+      background-size: 7px 13px;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+    .day-prev {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.465' height='13.041' viewBox='0 0 7.465 13.041'%3E%3Cpath id='day-prev' d='M1096.816,55.139l4.94,4.936a.928.928,0,0,1,0,1.313l0,0a.946.946,0,0,1-1.322,0l-5.6-5.593a.931.931,0,0,1-.027-1.286l5.621-5.632a.934.934,0,0,1,1.322,1.318Z' transform='translate(-1094.566 -48.62)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+    .day-next {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.465' height='13.041' viewBox='0 0 7.465 13.041'%3E%3Cpath id='day-next' d='M1656.67,55.142l-4.94-4.936a.928.928,0,0,1,0-1.313l0,0a.946.946,0,0,1,1.322,0l5.6,5.593a.932.932,0,0,1,.027,1.286l-5.621,5.631a.933.933,0,0,1-1.322-1.317Z' transform='translate(-1651.456 -48.62)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+.profile-patients-info {
+  td {
+    vertical-align: middle;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .patient {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    .time {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-right: 10px;
+      .hr {
+        font-size: 22px;
+        font-family: $font-family-semibold;
+        color: $tertiary;
+      }
+      .sec {
+        font-size: 11px;
+        font-family: $font-family-bold;
+        color: $tertiary;
+      }
+    }
+    .token {
+      margin-right: 10px;
+    }
+    .name-tag {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .name {
+        font-size: 12px;
+        font-family: $font-family-semibold;
+        color: $primary;
+        margin-right: 12px;
+      }
+      .tags {
+        display: flex;
+        justify-content: flex-end;
+        .tag {
+          margin: 1px;
+          font-size: 10px;
+          border-radius: 20px;
+          color: white;
+          padding: 0 5px;
+          &.kt {
+            background-color: #6464ff;
+          }
+          &.dc {
+            background-color: #63d691;
+          }
+          &.m {
+            background-color: #ff6191;
+          }
+          &.it {
+            background-color: #ff4363;
+          }
+          &.dt {
+            background-color: #f9954b;
+          }
+          &.k {
+            background-color: #f4c669;
+          }
+        }
+      }
+    }
+  }
+  .number {
+    display: block;
+    min-width: 1rem;
+    min-height: 1rem;
+    max-width: 1rem;
+    max-height: 1rem;
+    border: 1px solid #adadad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: $primary;
+    font-family: $font-family-bold;
+    border-radius: 50%;
+  }
+  .treatment-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    ul,
+    li,
+    .name {
+      font-size: 12px;
+      font-family: $font-family-light;
+      color: $primary;
+    }
+    .alts {
+      font-size: 8px;
+      margin: 0 8px;
+      text-transform: uppercase;
+    }
+    .treatment {
+      font-size: 12px;
+      color: $primary;
+    }
+  }
+  .profile-actions{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    .action-btn{
+        height: 12px !important;
+        width: 12px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &.whatsapp{
+            background-image: url('../images/icons/profile-patient-whatsapp.svg');
+        }
+        &.delete{
+            background-image: url('../images/icons/profile-patient-edit-1.svg');
+        }
+        &.edit{
+            background-image: url('../images/icons/profile-patient-edit.svg');
+        }
+        &.whatsapp-un{
+            background-image: url('../images/icons/profile-patient-whatsapp-un.svg');
+        }
+    }
+  }
+}

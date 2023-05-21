@@ -180,7 +180,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 p {
@@ -8853,7 +8853,7 @@ textarea.form-control-lg {
 }
 
 .fs-6 {
-  font-size: 1rem !important;
+  font-size: 1.125rem !important;
 }
 
 .fst-italic {
@@ -13837,6 +13837,220 @@ table.table td:last-child {
 table.table.table-striped > tbody > tr:nth-of-type(even) > td {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.profile .image-container {
+  min-width: 245px;
+  min-height: 245px;
+  width: 245px;
+  height: 245px;
+  display: block;
+  margin: auto;
+  background-color: #BE946D;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile .image-container img {
+  min-width: 245px;
+  min-height: 245px;
+  width: 245px;
+  height: 245px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.edit-profile {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+}
+
+.profile-more-text {
+  padding: 1.5rem;
+}
+@media screen and (min-width: 1600px) {
+  .profile-more-text {
+    padding: 54px 71px;
+  }
+}
+.profile-more-text .details {
+  font-size: 0.875rem;
+  font-family: "SofiaProLight", sans-serif, system-ui;
+  color: #26506E;
+  margin-top: 32px;
+  line-height: 1.6;
+}
+
+.myday .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  background-color: #0D9B90;
+  border-radius: 8px 8px 0 0;
+  position: sticky;
+  top: 0;
+}
+.myday .head .current-day {
+  color: white;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-family: "SofiaProSemiBold", sans-serif, system-ui;
+}
+.myday .head [class*=day-] {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 8px;
+  height: 14px;
+  background-size: 7px 13px;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.myday .head .day-prev {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.465' height='13.041' viewBox='0 0 7.465 13.041'%3E%3Cpath id='day-prev' d='M1096.816,55.139l4.94,4.936a.928.928,0,0,1,0,1.313l0,0a.946.946,0,0,1-1.322,0l-5.6-5.593a.931.931,0,0,1-.027-1.286l5.621-5.632a.934.934,0,0,1,1.322,1.318Z' transform='translate(-1094.566 -48.62)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.myday .head .day-next {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.465' height='13.041' viewBox='0 0 7.465 13.041'%3E%3Cpath id='day-next' d='M1656.67,55.142l-4.94-4.936a.928.928,0,0,1,0-1.313l0,0a.946.946,0,0,1,1.322,0l5.6,5.593a.932.932,0,0,1,.027,1.286l-5.621,5.631a.933.933,0,0,1-1.322-1.317Z' transform='translate(-1651.456 -48.62)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+
+.profile-patients-info td {
+  vertical-align: middle;
+}
+.profile-patients-info p {
+  margin-bottom: 0;
+}
+.profile-patients-info .patient {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.profile-patients-info .patient .time {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+.profile-patients-info .patient .time .hr {
+  font-size: 22px;
+  font-family: "SofiaProSemiBold", sans-serif, system-ui;
+  color: #0D9B90;
+}
+.profile-patients-info .patient .time .sec {
+  font-size: 11px;
+  font-family: "SofiaProBold", sans-serif, system-ui;
+  color: #0D9B90;
+}
+.profile-patients-info .patient .token {
+  margin-right: 10px;
+}
+.profile-patients-info .patient .name-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-patients-info .patient .name-tag .name {
+  font-size: 12px;
+  font-family: "SofiaProSemiBold", sans-serif, system-ui;
+  color: #26506E;
+  margin-right: 12px;
+}
+.profile-patients-info .patient .name-tag .tags {
+  display: flex;
+  justify-content: flex-end;
+}
+.profile-patients-info .patient .name-tag .tags .tag {
+  margin: 1px;
+  font-size: 10px;
+  border-radius: 20px;
+  color: white;
+  padding: 0 5px;
+}
+.profile-patients-info .patient .name-tag .tags .tag.kt {
+  background-color: #6464ff;
+}
+.profile-patients-info .patient .name-tag .tags .tag.dc {
+  background-color: #63d691;
+}
+.profile-patients-info .patient .name-tag .tags .tag.m {
+  background-color: #ff6191;
+}
+.profile-patients-info .patient .name-tag .tags .tag.it {
+  background-color: #ff4363;
+}
+.profile-patients-info .patient .name-tag .tags .tag.dt {
+  background-color: #f9954b;
+}
+.profile-patients-info .patient .name-tag .tags .tag.k {
+  background-color: #f4c669;
+}
+.profile-patients-info .number {
+  display: block;
+  min-width: 1rem;
+  min-height: 1rem;
+  max-width: 1rem;
+  max-height: 1rem;
+  border: 1px solid #adadad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #26506E;
+  font-family: "SofiaProBold", sans-serif, system-ui;
+  border-radius: 50%;
+}
+.profile-patients-info .treatment-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.profile-patients-info .treatment-info ul,
+.profile-patients-info .treatment-info li,
+.profile-patients-info .treatment-info .name {
+  font-size: 12px;
+  font-family: "SofiaProLight", sans-serif, system-ui;
+  color: #26506E;
+}
+.profile-patients-info .treatment-info .alts {
+  font-size: 8px;
+  margin: 0 8px;
+  text-transform: uppercase;
+}
+.profile-patients-info .treatment-info .treatment {
+  font-size: 12px;
+  color: #26506E;
+}
+.profile-patients-info .profile-actions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.profile-patients-info .profile-actions .action-btn {
+  height: 12px !important;
+  width: 12px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.profile-patients-info .profile-actions .action-btn.whatsapp {
+  background-image: url("../images/icons/profile-patient-whatsapp.svg");
+}
+.profile-patients-info .profile-actions .action-btn.delete {
+  background-image: url("../images/icons/profile-patient-edit-1.svg");
+}
+.profile-patients-info .profile-actions .action-btn.edit {
+  background-image: url("../images/icons/profile-patient-edit.svg");
+}
+.profile-patients-info .profile-actions .action-btn.whatsapp-un {
+  background-image: url("../images/icons/profile-patient-whatsapp-un.svg");
 }
 
 @media screen and (min-width: 1200px) {
