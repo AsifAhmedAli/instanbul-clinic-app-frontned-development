@@ -86,12 +86,14 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    width: 100%;
     .time {
       display: flex;
       align-items: center;
       flex-wrap: nowrap;
       justify-content: space-between;
       margin-right: 10px;
+      min-width: 36px;
       .hr {
         font-size: 22px;
         font-family: $font-family-semibold;
@@ -105,6 +107,27 @@
     }
     .token {
       margin-right: 10px;
+      min-width: 20px;
+      min-height: 20px;
+      max-width: 20px;
+      max-height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      background-color: $accent;
+      border-radius: 50%;
+      color: white;
+      font-family: $font-family-bold;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        min-width: 24px;
+        min-height: 24px;
+        border: 1px dashed $accent;
+        border-radius: 50%;
+      }
     }
     .name-tag {
       display: flex;
@@ -183,35 +206,65 @@
       color: $primary;
     }
   }
-  .profile-actions{
+  .profile-actions {
     display: flex;
     align-items: center;
     gap: 3px;
-    .action-btn{
-        height: 12px !important;
-        width: 12px !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        &.whatsapp{
-            background-image: url('../images/icons/profile-patient-whatsapp.svg');
+    .action-btn {
+      height: 12px !important;
+      width: 12px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      &.whatsapp {
+        background-image: url("../images/icons/profile-patient-whatsapp.svg");
+      }
+      &.delete {
+        background-image: url("../images/icons/profile-patient-edit-1.svg");
+      }
+      &.edit {
+        background-image: url("../images/icons/profile-patient-edit.svg");
+      }
+      &.whatsapp-un {
+        background-image: url("../images/icons/profile-patient-whatsapp-un.svg");
+      }
+    }
+  }
+  tr {
+    &.divider {
+      td {
+        position: relative;
+        &::before {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          content: "";
+          z-index: 1;
+          background-color: #e2f2f1;
+          left: 0;
+          top: 0;
+          border-radius: 50px 0 110px 50px;
         }
-        &.delete{
-            background-image: url('../images/icons/profile-patient-edit-1.svg');
+      }
+      .time{
+        position: relative;
+        z-index: 2;
+      }
+      .token {
+        background-color: white;
+        color: $primary;
+        z-index: 2;
+        &::before {
+          border: 1px dashed $primary;
         }
-        &.edit{
-            background-image: url('../images/icons/profile-patient-edit.svg');
-        }
-        &.whatsapp-un{
-            background-image: url('../images/icons/profile-patient-whatsapp-un.svg');
-        }
+      }
     }
   }
 }

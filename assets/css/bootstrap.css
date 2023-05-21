@@ -13924,6 +13924,7 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  width: 100%;
 }
 .profile-patients-info .patient .time {
   display: flex;
@@ -13931,6 +13932,7 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-right: 10px;
+  min-width: 36px;
 }
 .profile-patients-info .patient .time .hr {
   font-size: 22px;
@@ -13944,6 +13946,27 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
 }
 .profile-patients-info .patient .token {
   margin-right: 10px;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  background-color: #BE946D;
+  border-radius: 50%;
+  color: white;
+  font-family: "SofiaProBold", sans-serif, system-ui;
+  position: relative;
+}
+.profile-patients-info .patient .token::before {
+  position: absolute;
+  content: "";
+  min-width: 24px;
+  min-height: 24px;
+  border: 1px dashed #BE946D;
+  border-radius: 50%;
 }
 .profile-patients-info .patient .name-tag {
   display: flex;
@@ -14051,6 +14074,32 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
 }
 .profile-patients-info .profile-actions .action-btn.whatsapp-un {
   background-image: url("../images/icons/profile-patient-whatsapp-un.svg");
+}
+.profile-patients-info tr.divider td {
+  position: relative;
+}
+.profile-patients-info tr.divider td::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 1;
+  background-color: #e2f2f1;
+  left: 0;
+  top: 0;
+  border-radius: 50px 0 110px 50px;
+}
+.profile-patients-info tr.divider .time {
+  position: relative;
+  z-index: 2;
+}
+.profile-patients-info tr.divider .token {
+  background-color: white;
+  color: #26506E;
+  z-index: 2;
+}
+.profile-patients-info tr.divider .token::before {
+  border: 1px dashed #26506E;
 }
 
 @media screen and (min-width: 1200px) {
