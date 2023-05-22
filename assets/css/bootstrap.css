@@ -7762,8 +7762,40 @@ textarea.form-control-lg {
   min-width: 100vw !important;
 }
 
+.h-5 {
+  height: 5% !important;
+}
+
+.h-10 {
+  height: 10% !important;
+}
+
+.h-15 {
+  height: 15% !important;
+}
+
+.h-20 {
+  height: 20% !important;
+}
+
 .h-25 {
   height: 25% !important;
+}
+
+.h-30 {
+  height: 30% !important;
+}
+
+.h-35 {
+  height: 35% !important;
+}
+
+.h-40 {
+  height: 40% !important;
+}
+
+.h-45 {
+  height: 45% !important;
 }
 
 .h-50 {
@@ -13721,6 +13753,9 @@ main {
   padding-top: 42px;
   overflow-y: auto;
 }
+.custom-card.disabled * {
+  color: #B2B2B2 !important;
+}
 
 .my-tab {
   background: transparent;
@@ -13794,7 +13829,6 @@ main {
 }
 
 .table-responsive {
-  height: 200px;
   overflow-y: auto;
 }
 
