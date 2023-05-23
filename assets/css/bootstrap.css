@@ -14265,4 +14265,10 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
   border-radius: 50px !important;
 }
 
+.dashboard-graph-text {
+  font-size: 10px;
+  font-family: "SofiaProSemiBold", sans-serif, system-ui;
+  color: #26506E;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */

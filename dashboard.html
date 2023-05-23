@@ -586,99 +586,193 @@
               </div>
             </div>
             <div class="col-xxl-4 col-xl-4 col-12">
-              <div class="custom-card mb-6">
-                <div class="header nav-pills" id="pills-tab" role="tablist">
-                  <button
-                    class="my-tab"
-                    id="pills-home-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-home"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-home"
-                    aria-selected="true"
-                  >
-                    <img
-                      src="/assets/images/custom-card-simple-header.svg"
-                      class="bg-img"
-                      alt=""
-                    />
-                    <p>< TEMMUZ</p>
-                  </button>
-                  <button
-                    class="my-tab active"
-                    id="pills-profile-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-profile"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-profile"
-                    aria-selected="false"
-                  >
-                    <img
-                      src="/assets/images/custom-card-simple-header.svg"
-                      class="bg-img"
-                      alt=""
-                    />
-                    <p>PERFORMANS</p>
-                  </button>
-                  <button
-                    class="my-tab"
-                    id="pills-contact-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-contact"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-contact"
-                    aria-selected="false"
-                  >
-                    <img
-                      src="/assets/images/custom-card-simple-header.svg"
-                      class="bg-img"
-                      alt=""
-                    />
-                    <p>EYLÜL ></p>
-                  </button>
-                </div>
-                <div class="tab-content px-2" id="pills-tabContent">
-                  <div
-                    class="tab-pane fade"
-                    id="pills-home"
-                    role="tabpanel"
-                    aria-labelledby="pills-home-tab"
-                  >
-                    ...
+              <div class="row flex-column gy-6 h-100">
+                <div class="col-12 h-auto">
+                  <div class="custom-card mb-6">
+                    <div class="header nav-pills" id="pills-tab" role="tablist">
+                      <button
+                        class="my-tab"
+                        id="pills-home-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-home"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-home"
+                        aria-selected="true"
+                      >
+                        <img
+                          src="/assets/images/custom-card-simple-header.svg"
+                          class="bg-img"
+                          alt=""
+                        />
+                        <p>< TEMMUZ</p>
+                      </button>
+                      <button
+                        class="my-tab active"
+                        id="pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-profile"
+                        aria-selected="false"
+                      >
+                        <img
+                          src="/assets/images/custom-card-simple-header.svg"
+                          class="bg-img"
+                          alt=""
+                        />
+                        <p>PERFORMANS</p>
+                      </button>
+                      <button
+                        class="my-tab"
+                        id="pills-contact-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-contact"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-contact"
+                        aria-selected="false"
+                      >
+                        <img
+                          src="/assets/images/custom-card-simple-header.svg"
+                          class="bg-img"
+                          alt=""
+                        />
+                        <p>EYLÜL ></p>
+                      </button>
+                    </div>
+                    <div class="tab-content px-2" id="pills-tabContent">
+                      <div
+                        class="tab-pane fade"
+                        id="pills-home"
+                        role="tabpanel"
+                        aria-labelledby="pills-home-tab"
+                      >
+                        ...
+                      </div>
+                      <div
+                        class="tab-pane fade show active"
+                        id="pills-profile"
+                        role="tabpanel"
+                        aria-labelledby="pills-profile-tab"
+                      >
+                        <div class="row">
+                          <div class="col-md-8 mx-auto">
+                            <div class="row g-2">
+                              <div class="col-lg-4">
+                                <div>
+                                  <canvas
+                                    id="chart1"
+                                    height="110"
+                                    width="110"
+                                  ></canvas>
+                                </div>
+                                <p
+                                  class="text-center mb-0 dashboard-graph-text"
+                                >
+                                  BİREYSEL KÂRLILIK
+                                </p>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <canvas
+                                    id="chart2"
+                                    height="110"
+                                    width="110"
+                                  ></canvas>
+                                </div>
+                                <p
+                                  class="text-center mb-0 dashboard-graph-text"
+                                >
+                                  PERFORMANS
+                                </p>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <canvas
+                                    id="chart3"
+                                    height="110"
+                                    width="110"
+                                  ></canvas>
+                                </div>
+                                <p
+                                  class="text-center mb-0 dashboard-graph-text"
+                                >
+                                  BİREYSEL KÂRLILIK
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-contact"
+                        role="tabpanel"
+                        aria-labelledby="pills-contact-tab"
+                      >
+                        ...
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    class="tab-pane fade show active"
-                    id="pills-profile"
-                    role="tabpanel"
-                    aria-labelledby="pills-profile-tab"
-                  >
-                    <canvas id="chart" height="110" width="110"></canvas>
-                  </div>
-                  <div
-                    class="tab-pane fade"
-                    id="pills-contact"
-                    role="tabpanel"
-                    aria-labelledby="pills-contact-tab"
-                  >
-                    ...
+                </div>
+                <div class="col-12 flex-fill">
+                  <div class="custom-card h-100">
+                    <div class="header">
+                      <button class="my-tab active">
+                        <img
+                          src="/assets/images/custom-card-simple-header.svg"
+                          class="bg-img"
+                          alt=""
+                        />
+                        <p>HESAPLAMALAR</p>
+                      </button>
+                    </div>
+                    <div class="px-12">
+                      <p class="fw-semibold text-primary w-auto">
+                        PRİM HESAPLAMA
+                      </p>
+                      <table class="table table-borderless">
+                        <tr>
+                          <td class="fw-normal text-primary">NET KÂR</td>
+                          <td class="fw-normal text-primary">3.000.000 ₺</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-normal text-primary">HEKİM PAYI</td>
+                          <td class="fw-normal text-primary">
+                            1.950.000 ₺ (Net kârın %65’i)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="fw-normal text-primary">A</td>
+                          <td class="fw-normal text-primary">500.000 ₺</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-normal text-primary">B</td>
+                          <td class="fw-normal text-primary">500.000 ₺</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-normal text-primary">C</td>
+                          <td class="fw-normal text-primary">350.000 ₺</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-normal text-primary">D</td>
+                          <td class="fw-normal text-primary">600.000 ₺</td>
+                        </tr>
+                      </table>
+                      <p class="text-primary">
+                        <span class="fw-semibold">ÖRNEK</span>
+                        <span>A Doktoru :</span>
+                      </p>
+                      <p class="text-primary mb-1">
+                        Performans Puanı + Genel Disiplin ortalaması / 10 x
+                        Hasta Puanı
+                      </p>
+                      <p class="text-primary">Örnek : 7 + 5 / 2 / 10 x 4 =</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="custom-card">
-                <div class="header">
-                  <button class="my-tab active">
-                    <img
-                      src="/assets/images/custom-card-simple-header.svg"
-                      class="bg-img"
-                      alt=""
-                    />
-                    <p>HESAPLAMALAR</p>
-                  </button>
-                </div>
-                <div></div>
               </div>
             </div>
           </div>
