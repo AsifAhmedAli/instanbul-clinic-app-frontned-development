@@ -80,6 +80,51 @@
     min-width: unset;
     width: 100%;
   }
+  &.multiple{
+    padding-right: 2rem;
+    .my-tab{
+      width: auto;
+      font-size: 14px !important;
+      font-family: $font-family-semibold;
+      min-width: 140px;
+      padding: 4px 0;
+      padding-right: 4px;
+      text-align: right;
+      p{
+        color: #B2B2B2;
+        white-space: nowrap;
+      }
+      &:nth-last-child(2){
+        transform: translateX(16px);
+        z-index: 4;
+      }
+      &:nth-last-child(3){
+        transform: translateX(32px);
+        z-index: 5;
+      }
+      &:nth-last-child(4){
+        transform: translateX(48px);
+        z-index: 6;
+      }
+      &:nth-last-child(5){
+        transform: translateX(64px);
+        z-index: 7;
+      }
+      &.active{
+        z-index: 50;
+        text-align: center;
+        p{
+          color: $primary;
+        }
+      }
+      img{
+        display: block;
+        width: 160%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
 }
 
 /* width */
