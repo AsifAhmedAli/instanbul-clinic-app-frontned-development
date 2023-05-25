@@ -13822,20 +13822,24 @@ main {
   white-space: nowrap;
 }
 .nav-pills.multiple .my-tab:nth-last-child(2) {
-  transform: translateX(16px);
+  transform: translateX(4px);
   z-index: 4;
 }
 .nav-pills.multiple .my-tab:nth-last-child(3) {
-  transform: translateX(32px);
+  transform: translateX(8px);
   z-index: 5;
 }
 .nav-pills.multiple .my-tab:nth-last-child(4) {
-  transform: translateX(48px);
+  transform: translateX(12px);
   z-index: 6;
 }
 .nav-pills.multiple .my-tab:nth-last-child(5) {
-  transform: translateX(64px);
+  transform: translateX(16px);
   z-index: 7;
+}
+.nav-pills.multiple .my-tab:nth-last-child(6) {
+  transform: translateX(20px);
+  z-index: 8;
 }
 .nav-pills.multiple .my-tab.active {
   z-index: 50;
@@ -14314,6 +14318,59 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
   font-size: 10px;
   font-family: "SofiaProSemiBold", sans-serif, system-ui;
   color: #26506E;
+}
+
+.table-edit {
+  vertical-align: middle;
+}
+.table-edit .action-btn {
+  height: 17px !important;
+  width: 17px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.table-edit .action-btn.edit {
+  background-image: url("../images/icons/table-edit.svg");
+}
+
+label.on-off {
+  position: relative;
+  width: 66px !important;
+  height: 26px !important;
+  background-color: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+label input[type=checkbox] {
+  display: none;
+}
+label input[type=checkbox] + .slider {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 22px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-image: url("../images/icons/switch-unchecked.svg");
+}
+label input[type=checkbox]:checked + .slider {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 22px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-image: url("../images/icons/switch-checked.svg");
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

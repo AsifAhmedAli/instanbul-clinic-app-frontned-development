@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - HASTA MEMNUNIYETI</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="extensions/sticky-header/bootstrap-table-sticky-header.css"
+    />
+  </head>
+  <body class="layout">
+    <aside>
+      <ul class="list-unstyled ps-0 mb-0">
+        <li class="profile">
+          <a href="">
+            <img src="/assets/images/user.jpg" alt="" />
+            <p class="user-name">Bengi Su Yıldırım</p>
+          </a>
+        </li>
+        <li class="active">
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21.128"
+              height="18.49"
+              viewBox="0 0 21.128 18.49"
+            >
+              <path
+                id="home-icon"
+                d="M64.656,224.174,54.092,232.1h2.641v10.564h5.283v-5.281H67.3v5.283h5.283V232.019l2.638.079Z"
+                transform="translate(-54.092 -224.174)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20.354"
+              height="22.811"
+              viewBox="0 0 20.354 22.811"
+            >
+              <g id="profile-icon" transform="translate(-54.479 -328.525)">
+                <path
+                  id="Path_90"
+                  data-name="Path 90"
+                  d="M72.359,346.026h-2.58a8.133,8.133,0,0,1-6.79,0h-2.58a5.968,5.968,0,0,0-5.93,5.31h20.21V346.5a6.059,6.059,0,0,0-2.33-.47m-5.97-14.93a6.713,6.713,0,0,0-6.72,6.71v.01a6.715,6.715,0,1,0,6.72-6.72"
+                  fill="#fff"
+                />
+                <path
+                  id="Path_91"
+                  data-name="Path 91"
+                  d="M74.111,328.968a1.985,1.985,0,0,0-2.709.2l-.286.294-.285-.294a1.985,1.985,0,0,0-2.71-.2,2.084,2.084,0,0,0-.216,2.94c.023.027.047.053.072.079l2.809,2.9a.459.459,0,0,0,.649.008l.008-.008,2.81-2.9a2.083,2.083,0,0,0-.062-2.946c-.026-.025-.053-.049-.08-.073"
+                  fill="#f0603c"
+                />
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19.495"
+              height="19.507"
+              viewBox="0 0 19.495 19.507"
+            >
+              <path
+                id="settings-icon"
+                d="M72.795,447.831a2.508,2.508,0,0,1,1.609-2.34,9.935,9.935,0,0,0-1.2-2.9,2.544,2.544,0,0,1-1.021.218,2.5,2.5,0,0,1-2.289-3.524,9.9,9.9,0,0,0-2.893-1.2,2.507,2.507,0,0,1-4.685,0,9.983,9.983,0,0,0-2.9,1.2,2.5,2.5,0,0,1-2.29,3.524,2.46,2.46,0,0,1-1.024-.218,10.15,10.15,0,0,0-1.194,2.9,2.508,2.508,0,0,1,.005,4.685,9.91,9.91,0,0,0,1.2,2.9,2.5,2.5,0,0,1,3.307,3.307,9.976,9.976,0,0,0,2.9,1.2,2.5,2.5,0,0,1,4.671,0,9.921,9.921,0,0,0,2.9-1.2,2.507,2.507,0,0,1,3.307-3.307,10,10,0,0,0,1.2-2.9,2.522,2.522,0,0,1-1.609-2.349M64.7,451.888a4.062,4.062,0,1,1,4.062-4.062,4.062,4.062,0,0,1-4.062,4.062Z"
+                transform="translate(-54.909 -438.083)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21.562"
+              height="18.481"
+              viewBox="0 0 21.562 18.481"
+            >
+              <path
+                id="messages-icon"
+                d="M75.437,550.053a2,2,0,0,0-.976-1.745l-9.805-4.881-9.8,4.881a2.118,2.118,0,0,0-.976,1.745v9.8a2.06,2.06,0,0,0,2.053,2.053H73.382a2.06,2.06,0,0,0,2.053-2.053Zm-10.781,4.925-8.248-5.39,8.247-4.107,8.247,4.107Z"
+                transform="translate(-53.875 -543.427)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21.05"
+              height="21.051"
+              viewBox="0 0 21.05 21.051"
+            >
+              <path
+                id="help-icon"
+                d="M75.181,658.569a10.525,10.525,0,1,1-10.525-10.525,10.526,10.526,0,0,1,10.525,10.525Zm-10.243-7.045a5.5,5.5,0,0,0-4.947,2.709.509.509,0,0,0,.115.689l1.47,1.117a.508.508,0,0,0,.707-.091c.758-.962,1.278-1.52,2.433-1.52.867,0,1.939.558,1.939,1.4,0,.636-.525.962-1.378,1.442-1,.56-2.32,1.257-2.32,3v.17a.509.509,0,0,0,.509.509h2.377a.509.509,0,0,0,.509-.509v-.057c0-1.208,3.53-1.259,3.53-4.527,0-2.464-2.552-4.331-4.944-4.331m-.282,10.525A1.952,1.952,0,1,0,66.608,664a1.952,1.952,0,0,0-1.952-1.952"
+                transform="translate(-54.131 -648.044)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="profile logout">
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20.59"
+              height="18.014"
+              viewBox="0 0 20.59 18.014"
+            >
+              <path
+                id="logout-icon"
+                d="M62.083,964.24v2.572H72.378v12.87H62.083v2.572H74.951V964.24Zm-2.577,5.144-5.145,3.864,5.145,3.858v-2.572H69.8v-2.572h-10.3Z"
+                transform="translate(-54.361 -964.24)"
+                fill="#fff"
+              />
+            </svg>
+            <p class="user-name">Çıkış</p>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <main>
+      <header>
+        <div class="container-fluid">
+          <nav>
+            <div class="left">
+              <button class="humburger">
+                <img
+                  src="/assets/images/icons/humburger.svg"
+                  width="26"
+                  height="26"
+                  alt=""
+                />
+              </button>
+              <img src="/assets/images/logo.svg" class="logo" alt="" />
+            </div>
+            <div class="center flex-fill">
+              <form action="">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm search"
+                    placeholder="Arama..."
+                  />
+                  <button class="btn btn-sm btn-primary px-4">
+                    <img src="/assets/images/icons/search-icon.svg" alt="" />
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="right">
+              <p class="datetime mb-0">18.08.'22 Pazartesi | 11:50</p>
+              <div class="actions">
+                <button class="btn btn-sm btn-tertiary">PDF Kaydet</button>
+                <button class="btn btn-sm btn-accent">Yazdır</button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="main-body">
+        <div class="container-fluid h-100">
+          <div class="row g-4 h-100">
+            <div class="col-xxl-2 col-xl-3 col-md-4 col-12 h-100">
+              <div class="row flex-column h-100 gy-8">
+                <div class="col-12">
+                  <div class="custom-card with-dropdown disabled">
+                    <div class="header">
+                      <div class="dropdown-center">
+                        <button
+                          class="my-tab active"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img
+                            src="/assets/images/custom-card-dropdown-header.svg"
+                            class="bg-img"
+                            alt=""
+                          />
+                          <p>GELİRLER</p>
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="text-center">
+                        <p class="text-primary fw-bold">3.000.000 ₺</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 h-35">
+                  <div class="custom-card with-dropdown h-100">
+                    <div class="header">
+                      <div class="dropdown-center">
+                        <button
+                          class="my-tab active"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img
+                            src="/assets/images/custom-card-dropdown-header.svg"
+                            class="bg-img"
+                            alt=""
+                          />
+                          <p>GIDERLER</p>
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="text-center">
+                        <p class="text-primary fw-bold">2.000.000 ₺</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 flex-fill">
+                  <div class="custom-card with-dropdown h-100">
+                    <div class="header">
+                      <div class="dropdown-center">
+                        <button
+                          class="my-tab active"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img
+                            src="/assets/images/custom-card-dropdown-header.svg"
+                            class="bg-img"
+                            alt=""
+                          />
+                          <p>GIDERLER</p>
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="text-center">
+                        <p class="text-primary fw-bold">3.000.000 ₺</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-10 col-xl-9 col-md-8 col-12 h-100">
+              <div class="custom-card with-dropdown h-100 px-6">
+                <div class="header">
+                  <div class="dropdown-center">
+                    <button
+                      class="my-tab active"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        src="/assets/images/custom-card-dropdown-header.svg"
+                        class="bg-img"
+                        alt=""
+                      />
+                      <p>HASTA MEMNUNIYETI</p>
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="table-responsive h-100 d-flex align-items-start">
+                  <table class="table table-striped table-borderless w-50">
+                    <thead>
+                      <tr>
+                        <th class="text-center">#</th>
+                        <th>Hasta Adı</th>
+                        <th class="text-center">Yapılan Islem</th>
+                        <th class="text-center">Puanlama</th>
+                        <th></th>
+                        <th>Tarih</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fw-bold">1</td>
+                        <td class="fw-bold">Onuralp YILDIZOGLU</td>
+                        <td class="text-center">Implant Tedavisi</td>
+                        <td class="text-center">7</td>
+                        <td class="table-edit">
+                          <button class="action-btn edit"></button>
+                        </td>
+                        <td>
+                          <div class="dropdown">
+                            <button
+                              class="btn dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton1"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              01.08
+                            </button>
+                            <ul
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton1"
+                            >
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr></tr>
+                    </tbody>
+                  </table>
+                  <div style="width: 1rem"></div>
+                  <table class="table table-striped table-borderless w-50">
+                    <thead>
+                      <tr>
+                        <th class="text-center">#</th>
+                        <th>Hasta Adı</th>
+                        <th class="text-center">Yapılan Islem</th>
+                        <th class="text-center">Puanlama</th>
+                        <th></th>
+                        <th>Tarih</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fw-bold">1</td>
+                        <td class="fw-bold">Onuralp YILDIZOGLU</td>
+                        <td class="text-center">Implant Tedavisi</td>
+                        <td class="text-center">7</td>
+                        <td class="table-edit">
+                          <button class="action-btn edit"></button>
+                        </td>
+                        <td>
+                          <div class="dropdown">
+                            <button
+                              class="btn dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton1"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              01.08
+                            </button>
+                            <ul
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton1"
+                            >
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/assets/js/jquery-3.6.4.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- <script src="/assets/js/script.js"></script> -->
+
+    <!-- <script src="/assets/js/drawArc.js"></script>
+    <script src="/assets/js/addCenterTextAfterUpdate.js"></script>
+    <script src="/assets/js/addCenterTextAfterDraw.js"></script>
+    <script src="/assets/js/dataSets.js"></script>
+    <script src="/assets/js/chartData.js"></script>
+    <script src="/assets/js/drawOptions.js"></script> -->
+
+    <!-- <script src="/assets/js/dashboardChart1.js"></script> -->
+    <script src="/assets/js/dashboardChart2.js"></script>
+  </body>
+</html>
