@@ -298,10 +298,16 @@
                           BIREYSEL KÂRLILIK
                         </p>
                         <div>
-                          <canvas id="dashboard_profit" width="auto" height="auto"></canvas>
+                          <canvas
+                            id="chart4"
+                            width="auto"
+                            height="auto"
+                          ></canvas>
                         </div>
                         <h4 class="text-center">AĞUSTOS '22</h4>
-                        <p class="text-center fw-semibold mb-0 text-primary">Skor 7.1</p>
+                        <p class="text-center fw-semibold mb-0 text-primary">
+                          Skor 7.1
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -589,7 +595,7 @@
                       </tr>
                     </tbody>
                   </table>
-                  <div style="width: 1rem;"></div>
+                  <div style="width: 1rem"></div>
                   <table class="table table-striped table-borderless w-50">
                     <thead>
                       <tr>
@@ -848,8 +854,74 @@
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
 
-    <script src="/assets/js/chartDataSets.js"></script>
-    <script src="/assets/js/chartPluginService.js"></script>
-    <script src="/assets/js/chartDraw.js"></script>
+    <script>
+      var primaryDark = "#26506E";
+      var primaryLight = "#A8B9C5";
+
+      var chart4Data = {
+        labels: ["Red", "Blue"],
+        datasets: [
+          {
+            data: [8.2, 1.8],
+            backgroundColor: [primaryDark, primaryLight],
+          },
+        ],
+      };
+
+      Chart.pluginService.register({
+        beforeDraw: function (chart) {
+          var width = chart.chart.width,
+            height = chart.chart.height,
+            ctx = chart.chart.ctx;
+
+          ctx.restore();
+          ctx.font =
+            "bold 36px" +
+            chart.config.options.plugins.legend.labels.font.family;
+          ctx.textBaseline = "middle";
+
+          var text = chart.data.datasets[0].data[0],
+            textX = Math.round((width - ctx.measureText(text).width) / 2),
+            textY = height / 2;
+          if (chart.config.options.elements.customCutout !== undefined) {
+            chart.getDatasetMeta(0).data[1]._view.innerRadius = 45;
+            chart.getDatasetMeta(0).data[1]._view.outerRadius = 55;
+            chart.update();
+          }
+
+          ctx.fillText(text, textX, textY);
+          ctx.fillStyle = chart.data.datasets[0].backgroundColor[0];
+          ctx.save();
+        },
+      });
+
+      var chartOptions = {
+        tooltips: { enabled: false },
+        hover: { mode: null },
+        elements: {
+          customCutout: true,
+        },
+        cutoutPercentage: 60,
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                family: "'SofiaProBold'",
+              },
+            },
+          },
+        },
+      };
+
+      var chart4 = new Chart(document.getElementById("chart4"), {
+        type: "doughnut",
+        data: chart4Data,
+        options: chartOptions,
+      });
+    </script>
   </body>
 </html>

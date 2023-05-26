@@ -44,13 +44,3 @@ var dashboard_income_main_data = {
     },
   ],
 };
-
-var dashboardProfitData = {
-  labels: ["Red", "Blue"],
-  datasets: [
-    {
-      data: [9, 1],
-      backgroundColor: [primaryDark, primaryLight],
-    },
-  ],
-};

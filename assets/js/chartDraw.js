@@ -39,14 +39,12 @@ var chart3 = new Chart(document.getElementById("chart3"), {
   options: chartOptions,
 });
 
-var dashboardIncomeMainChart = new Chart(document.getElementById("dashboard_income_main"), {
-  type: "doughnut",
-  data: dashboard_income_main_data,
-  options: chartOptions,
-});
+var dashboardIncomeMainChart = new Chart(
+  document.getElementById("dashboard_income_main"),
+  {
+    type: "doughnut",
+    data: dashboard_income_main_data,
+    options: chartOptions,
+  }
+);
 
-var dashboardProfile = new Chart(document.getElementById("dashboard_profit"), {
-  type: "doughnut",
-  data: dashboardProfitData,
-  options: chartOptions,
-});
