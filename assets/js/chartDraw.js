@@ -4,7 +4,7 @@ var chartOptions = {
   elements: {
     customCutout: true,
   },
-  cutoutPercentage: 50,
+  cutoutPercentage: 60,
   responsive: true,
   legend: {
     display: false,
@@ -36,5 +36,17 @@ var chart2 = new Chart(document.getElementById("chart2"), {
 var chart3 = new Chart(document.getElementById("chart3"), {
   type: "doughnut",
   data: chart3Data,
+  options: chartOptions,
+});
+
+var dashboardIncomeMainChart = new Chart(document.getElementById("dashboard_income_main"), {
+  type: "doughnut",
+  data: dashboard_income_main_data,
+  options: chartOptions,
+});
+
+var dashboardProfile = new Chart(document.getElementById("dashboard_profit"), {
+  type: "doughnut",
+  data: dashboardProfitData,
   options: chartOptions,
 });

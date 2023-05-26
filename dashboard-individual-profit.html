@@ -175,7 +175,7 @@
         <div class="container-fluid h-100">
           <div class="row g-4 h-100">
             <div class="col-xxl-2 col-xl-3 col-md-4 col-12 h-100">
-              <div class="row flex-column h-100 gy-8">
+              <div class="row flex-column flex-nowrap h-100 gy-8">
                 <div class="col-12">
                   <div class="custom-card with-dropdown disabled">
                     <div class="header">
@@ -274,7 +274,7 @@
                             class="bg-img"
                             alt=""
                           />
-                          <p>GIDERLER</p>
+                          <p>ÖZET</p>
                         </button>
                         <ul
                           class="dropdown-menu"
@@ -294,7 +294,14 @@
                     </div>
                     <div>
                       <div class="text-center">
-                        <p class="text-primary fw-bold">3.000.000 ₺</p>
+                        <p class="text-primary fw-bold text-uppercase">
+                          BIREYSEL KÂRLILIK
+                        </p>
+                        <div>
+                          <canvas id="dashboard_profit" width="auto" height="auto"></canvas>
+                        </div>
+                        <h4 class="text-center">AĞUSTOS '22</h4>
+                        <p class="text-center fw-semibold mb-0 text-primary">Skor 7.1</p>
                       </div>
                     </div>
                   </div>
@@ -839,17 +846,10 @@
     <script src="/assets/js/jquery-3.6.4.min.js"></script>
     <script src="/assets/js/popper.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- <script src="/assets/js/script.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
 
-    <!-- <script src="/assets/js/drawArc.js"></script>
-    <script src="/assets/js/addCenterTextAfterUpdate.js"></script>
-    <script src="/assets/js/addCenterTextAfterDraw.js"></script>
-    <script src="/assets/js/dataSets.js"></script>
-    <script src="/assets/js/chartData.js"></script>
-    <script src="/assets/js/drawOptions.js"></script> -->
-
-    <!-- <script src="/assets/js/dashboardChart1.js"></script> -->
-    <script src="/assets/js/dashboardChart2.js"></script>
+    <script src="/assets/js/chartDataSets.js"></script>
+    <script src="/assets/js/chartPluginService.js"></script>
+    <script src="/assets/js/chartDraw.js"></script>
   </body>
 </html>

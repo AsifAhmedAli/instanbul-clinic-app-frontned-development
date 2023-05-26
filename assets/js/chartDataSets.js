@@ -34,3 +34,23 @@ var chart3Data = {
     },
   ],
 };
+
+var dashboard_income_main_data = {
+  labels: ["Red", "Blue"],
+  datasets: [
+    {
+      data: [450, 50],
+      backgroundColor: [primaryDark, primaryLight],
+    },
+  ],
+};
+
+var dashboardProfitData = {
+  labels: ["Red", "Blue"],
+  datasets: [
+    {
+      data: [9, 1],
+      backgroundColor: [primaryDark, primaryLight],
+    },
+  ],
+};
