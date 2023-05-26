@@ -9,6 +9,15 @@ var chartOptions = {
   legend: {
     display: false,
   },
+  plugins: {
+    legend: {
+      labels: {
+        font: {
+          family: "'SofiaProBold'",
+        },
+      },
+    },
+  },
 };
 
 // Draw Charts

@@ -5,7 +5,7 @@ Chart.pluginService.register({
       ctx = chart.chart.ctx;
 
     ctx.restore();
-    ctx.font = "20px var(--bs-font-family-sans-serif)";
+    ctx.font = "bold 36px" + chart.config.options.plugins.legend.labels.font.family;
     ctx.textBaseline = "middle";
 
     var text = chart.data.datasets[0].data[0],
