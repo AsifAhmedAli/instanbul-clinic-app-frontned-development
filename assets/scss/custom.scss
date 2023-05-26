@@ -25,6 +25,10 @@
     font-family: $font-family-bold;
     padding-left: 24px;
     padding-right: 24px;
+    @media screen and (max-width: 768px){
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }
 
@@ -103,4 +107,8 @@ label {
       }
     }
   }
+}
+
+canvas{
+  margin: auto;
 }

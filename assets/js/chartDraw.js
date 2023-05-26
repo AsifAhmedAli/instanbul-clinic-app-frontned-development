@@ -5,7 +5,7 @@ var chartOptions = {
     customCutout: true,
   },
   cutoutPercentage: 60,
-  responsive: true,
+  responsive: false,
   legend: {
     display: false,
   },

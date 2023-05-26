@@ -12,8 +12,8 @@ Chart.pluginService.register({
       textX = Math.round((width - ctx.measureText(text).width) / 2),
       textY = height / 2;
     if (chart.config.options.elements.customCutout !== undefined) {
-      chart.getDatasetMeta(0).data[1]._view.innerRadius = 45;
-      chart.getDatasetMeta(0).data[1]._view.outerRadius = 55;
+      chart.getDatasetMeta(0).data[1]._view.innerRadius = 40;
+      chart.getDatasetMeta(0).data[1]._view.outerRadius = 50;
       chart.update();
     }
 
