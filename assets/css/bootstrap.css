@@ -13673,6 +13673,17 @@ aside > ul > li > a svg * {
     display: none;
   }
 }
+aside.open {
+  position: fixed;
+  right: 0;
+  width: 132px;
+  display: block;
+  z-index: 999;
+  min-width: unset;
+  background-color: var(--bs-primary);
+  max-width: unset;
+  box-shadow: -35px 0 60px rgba(33, 37, 41, 0.25);
+}
 
 /* Header */
 header nav {
@@ -13833,6 +13844,11 @@ main {
   .main-body {
     overflow-y: auto;
     overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-body {
+    height: calc(100% - 80px);
   }
 }
 
@@ -14099,6 +14115,11 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
 @media screen and (min-width: 1600px) {
   .profile-more-text {
     padding: 54px 71px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile-more-text {
+    padding: 1rem 0.5rem;
   }
 }
 .profile-more-text .details {
@@ -14415,6 +14436,15 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
   color: #B2B2B2;
   font-style: italic;
 }
+@media screen and (max-width: 768px) {
+  .main-chat {
+    padding: 1.5rem 1rem;
+  }
+  .main-chat .heading {
+    padding-top: 20px;
+    top: -24px;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .form-control.custom-form {
@@ -14459,6 +14489,12 @@ table.table.table-striped > tbody > tr:nth-of-type(even) > td {
 }
 .accordion-button.collapsed {
   border-radius: 50px !important;
+}
+@media screen and (max-width: 992px) {
+  .accordion-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .dashboard-graph-text {

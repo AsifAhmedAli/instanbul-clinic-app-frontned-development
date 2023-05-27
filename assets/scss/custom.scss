@@ -44,6 +44,10 @@
   &.collapsed {
     border-radius: 50px !important;
   }
+  @media screen and (max-width: 992px){
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
 }
 
 .dashboard-graph-text {

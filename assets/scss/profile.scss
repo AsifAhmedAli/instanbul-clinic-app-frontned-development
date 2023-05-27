@@ -31,6 +31,9 @@
     padding: 54px 71px;
   }
   padding: 1.5rem;
+  @media screen and (max-width: 768px){
+    padding: 1rem .5rem;
+  }
   .details {
     font-size: 0.875rem;
     font-family: $font-family-light;

@@ -82,4 +82,11 @@
             font-style: italic;
         }
     }
+    @media screen and (max-width: 768px){
+      padding: 1.5rem 1rem;
+      .heading{
+        padding-top: 20px;
+        top: -24px;
+      }
+    }
 }

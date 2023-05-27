@@ -217,7 +217,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 h-35">
+                <div class="col-12 h-xxl-35 h-auto">
                   <div class="custom-card with-dropdown h-100">
                     <div class="header">
                       <div class="dropdown-center">
@@ -300,8 +300,8 @@
                         <div>
                           <canvas
                             id="chart4"
-                            width="auto"
-                            height="auto"
+                            width="110"
+                            height="110"
                           ></canvas>
                         </div>
                         <h4 class="text-center">AĞUSTOS '22</h4>
@@ -884,8 +884,8 @@
             textX = Math.round((width - ctx.measureText(text).width) / 2),
             textY = height / 2;
           if (chart.config.options.elements.customCutout !== undefined) {
-            chart.getDatasetMeta(0).data[1]._view.innerRadius = 45;
-            chart.getDatasetMeta(0).data[1]._view.outerRadius = 55;
+            chart.getDatasetMeta(0).data[1]._view.innerRadius = 40;
+            chart.getDatasetMeta(0).data[1]._view.outerRadius = 50;
             chart.update();
           }
 
@@ -902,7 +902,7 @@
           customCutout: true,
         },
         cutoutPercentage: 60,
-        responsive: true,
+        responsive: false,
         legend: {
           display: false,
         },

@@ -102,6 +102,17 @@ aside {
   @media screen and (max-width: 1200px) {
     display: none;
   }
+  &.open {
+    position: fixed;
+    right: 0;
+    width: 132px;
+    display: block;
+    z-index: 999;
+    min-width: unset;
+    background-color: var(--bs-primary);
+    max-width: unset;
+    box-shadow: -35px 0 60px rgba($color: $dark, $alpha: 0.25);
+  }
 }
 
 /* Header */
@@ -218,19 +229,19 @@ header {
         margin-top: 1rem;
         width: 100%;
         justify-content: space-between;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
         .datetime {
           font-size: 14px;
           margin-right: 0.5rem;
         }
-        .actions{
+        .actions {
           display: flex;
           align-items: center;
           gap: 4px;
-          .btn{
+          .btn {
             font-size: 14px;
             white-space: nowrap;
-            padding: .25rem .5rem;
+            padding: 0.25rem 0.5rem;
           }
         }
       }
@@ -250,7 +261,7 @@ main {
     width: 100%;
     border-radius: 0;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     padding: 1rem 0;
   }
 }
@@ -262,9 +273,12 @@ main {
     overflow-y: auto;
     overflow-x: hidden;
   }
+  @media screen and (max-width: 768px) {
+    height: calc(100% - 80px);
+  }
 }
 
-.nav-pills{
+.nav-pills {
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
