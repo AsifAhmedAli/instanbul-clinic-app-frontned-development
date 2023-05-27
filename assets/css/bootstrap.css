@@ -13854,8 +13854,12 @@ main {
 
 .nav-pills {
   flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
+}
+@media screen and (max-width: 1100px) {
+  .nav-pills {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 }
 
 .custom-card {
@@ -14003,6 +14007,37 @@ main {
   left: 50%;
   transform: translateX(-50%);
 }
+@media screen and (max-width: 1200px) {
+  .nav-pills.multiple {
+    padding-right: 0;
+    width: calc(100% - 60px);
+    overflow-x: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 20%;
+  }
+  .nav-pills.multiple .my-tab {
+    transform: unset !important;
+    text-align: center !important;
+    z-index: unset;
+    min-width: unset;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+  .nav-pills.multiple .my-tab.active {
+    background-color: #26506E;
+  }
+  .nav-pills.multiple .my-tab.active p {
+    color: white;
+  }
+  .nav-pills.multiple .my-tab img {
+    display: none !important;
+  }
+  .nav-pills.multiple .my-tab p {
+    text-align: center;
+    font-size: 14px !important;
+  }
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -14081,6 +14116,11 @@ table.table td:last-child {
 table.table.table-striped > tbody > tr:nth-of-type(even) > td {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.big-number {
+  font-size: 22px;
+  font-family: "SofiaProSemiBold", sans-serif, system-ui;
 }
 
 .profile .image-container {
