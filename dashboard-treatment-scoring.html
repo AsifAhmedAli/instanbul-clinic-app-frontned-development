@@ -174,8 +174,8 @@
       <div class="main-body">
         <div class="container-fluid h-100">
           <div class="row g-4 h-100">
-            <div class="col-xxl-2 col-xl-3 col-md-4 col-12 h-100">
-              <div class="row flex-column h-100 gy-8">
+            <div class="col-xxl-2 col-xl-3 col-md-4 col-12 h-md-100 h-auto">
+              <div class="row flex-column flex-nowrap h-100 gy-8">
                 <div class="col-12">
                   <div class="custom-card with-dropdown disabled">
                     <div class="header">
@@ -192,7 +192,7 @@
                             class="bg-img"
                             alt=""
                           />
-                          <p>GELİRLER</p>
+                          <p>HASTA MEMNUNIYETI</p>
                         </button>
                         <ul
                           class="dropdown-menu"
@@ -211,13 +211,13 @@
                       </div>
                     </div>
                     <div>
-                      <div class="text-center">
-                        <p class="text-primary fw-bold">3.000.000 ₺</p>
+                      <div>
+                        <canvas id="chart1" width="110" height="110"></canvas>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 h-35">
+                <div class="col-12 h-xxl-35 h-auto">
                   <div class="custom-card with-dropdown h-100">
                     <div class="header">
                       <div class="dropdown-center">
@@ -233,7 +233,7 @@
                             class="bg-img"
                             alt=""
                           />
-                          <p>GIDERLER</p>
+                          <p>TEDAVI PUANLAMASI</p>
                         </button>
                         <ul
                           class="dropdown-menu"
@@ -252,8 +252,8 @@
                       </div>
                     </div>
                     <div>
-                      <div class="text-center">
-                        <p class="text-primary fw-bold">2.000.000 ₺</p>
+                      <div>
+                        <canvas id="chart2" width="110" height="110"></canvas>
                       </div>
                     </div>
                   </div>
@@ -294,7 +294,20 @@
                     </div>
                     <div>
                       <div class="text-center">
-                        <p class="text-primary fw-bold">3.000.000 ₺</p>
+                        <p class="text-primary fw-bold text-uppercase">
+                          TEDAVI PUANLAMASI
+                        </p>
+                        <div>
+                          <canvas
+                            id="chart3"
+                            width="110"
+                            height="110"
+                          ></canvas>
+                        </div>
+                        <h4 class="text-center">AĞUSTOS '22</h4>
+                        <p class="text-center fw-semibold mb-0 text-primary">
+                          Skor 7.1
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -317,7 +330,7 @@
                         class="bg-img"
                         alt=""
                       />
-                      <p>TEDAVI PUANLAMASI</p>
+                      <p>HASTA MEMNUNIYETI</p>
                     </button>
                     <ul
                       class="dropdown-menu"
@@ -457,17 +470,108 @@
     <script src="/assets/js/jquery-3.6.4.min.js"></script>
     <script src="/assets/js/popper.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- <script src="/assets/js/script.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
 
-    <!-- <script src="/assets/js/drawArc.js"></script>
-    <script src="/assets/js/addCenterTextAfterUpdate.js"></script>
-    <script src="/assets/js/addCenterTextAfterDraw.js"></script>
-    <script src="/assets/js/dataSets.js"></script>
-    <script src="/assets/js/chartData.js"></script>
-    <script src="/assets/js/drawOptions.js"></script> -->
+    <script>
+      var primaryDark = "#26506E";
+      var primaryLight = "#A8B9C5";
 
-    <!-- <script src="/assets/js/dashboardChart1.js"></script> -->
-    <script src="/assets/js/dashboardChart2.js"></script>
+      var chart1Data = {
+        labels: ["Red", "Blue"],
+        datasets: [
+          {
+            data: [9, 1],
+            backgroundColor: ["#B2B2B2", "#E8E8E8"],
+          },
+        ],
+      };
+
+      var chart2Data = {
+        labels: ["Red", "Blue"],
+        datasets: [
+          {
+            data: [9.5, 0.5],
+            backgroundColor: [primaryDark, primaryLight],
+          },
+        ],
+      };
+
+      var chart3Data = {
+        labels: ["Red", "Blue"],
+        datasets: [
+          {
+            data: [8.2, 1.8],
+            backgroundColor: [primaryDark, primaryLight],
+          },
+        ],
+      };
+
+      Chart.pluginService.register({
+        beforeDraw: function (chart) {
+          var width = chart.chart.width,
+            height = chart.chart.height,
+            ctx = chart.chart.ctx;
+
+          ctx.restore();
+          ctx.font =
+            "bold 36px" +
+            chart.config.options.plugins.legend.labels.font.family;
+          ctx.textBaseline = "middle";
+
+          var text = chart.data.datasets[0].data[0],
+            textX = Math.round((width - ctx.measureText(text).width) / 2),
+            textY = height / 2;
+          if (chart.config.options.elements.customCutout !== undefined) {
+            chart.getDatasetMeta(0).data[1]._view.innerRadius = 40;
+            chart.getDatasetMeta(0).data[1]._view.outerRadius = 50;
+            chart.update();
+          }
+
+          ctx.fillText(text, textX, textY);
+          ctx.fillStyle = chart.data.datasets[0].backgroundColor[0];
+          ctx.save();
+        },
+      });
+
+      var chartOptions = {
+        tooltips: { enabled: false },
+        hover: { mode: null },
+        elements: {
+          customCutout: true,
+        },
+        cutoutPercentage: 60,
+        responsive: false,
+        legend: {
+          display: false,
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                family: "'SofiaProBold'",
+              },
+            },
+          },
+        },
+      };
+
+      var chart1 = new Chart(document.getElementById("chart1"), {
+        type: "doughnut",
+        data: chart1Data,
+        options: chartOptions,
+      });
+
+      var chart2 = new Chart(document.getElementById("chart2"), {
+        type: "doughnut",
+        data: chart2Data,
+        options: chartOptions,
+      });
+
+      var chart3 = new Chart(document.getElementById("chart3"), {
+        type: "doughnut",
+        data: chart3Data,
+        options: chartOptions,
+      });
+    </script>
   </body>
 </html>
